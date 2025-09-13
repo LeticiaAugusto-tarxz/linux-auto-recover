@@ -1,0 +1,8 @@
+[Unit]
+Description=Auto-recover Docker Service
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-recover.sh
